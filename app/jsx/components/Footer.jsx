@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class Footer extends React.Component {
+class _Footer {
   render() {
     return (
       <footer>
@@ -9,3 +9,5 @@ export class Footer extends React.Component {
     );
   }
 }
+
+export const Footer = React.createClass(_Footer.prototype);

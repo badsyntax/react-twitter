@@ -2,3 +2,5 @@ node_modules
 bower_components
 dist
 *.log
+app/config/app.json
+.DS_Store

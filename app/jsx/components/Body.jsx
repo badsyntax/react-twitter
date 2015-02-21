@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class Body extends React.Component {
+class _Body {
   getClassName() {
     return 'foo';
   }
@@ -16,3 +16,5 @@ export class Body extends React.Component {
     );
   }
 }
+
+export const Body = React.createClass(_Body.prototype);

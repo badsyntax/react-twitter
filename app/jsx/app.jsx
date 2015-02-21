@@ -1,9 +1,9 @@
 import React from 'react';
+import Router from 'react-router';
 import 'react/addons';
 
-import {App} from './components/App.react.jsx';
+import {routes} from './routes.jsx';
 
-React.render(
-  <App />,
-  document.getElementById('app')
-);
+Router.run(routes, function (Handler) {
+  React.render(<Handler/>, document.body);
+});
