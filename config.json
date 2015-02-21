@@ -1,0 +1,5 @@
+{
+  "serverPort": 8888,
+  "livereloadPort": 35731,
+  "distPath": "dist"
+}
