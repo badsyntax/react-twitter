@@ -3,15 +3,23 @@ import Router from 'react-router';
 
 var { Link } = Router;
 
-class _Header {
+export const Header = React.createClass({
+  mixins: [Router.State],
+
+  getActiveClassName() {
+    return Array.prototype.slice.call(arguments).some(function(routeName) {
+      return this.isActive(routeName);
+    }, this) ? 'active' : '';
+  },
+
   render() {
     return (
       <nav className="navbar navbar-default" role="navigation">
         <div className="container-fluid">
           <div className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
-              <li className={this.getActiveClassName('home')}>
-                <Link to="home">Home</Link>
+              <li className={this.getActiveClassName('signin')}>
+                <Link to="signin">Sign In</Link>
               </li>
               <li className={this.getActiveClassName('about')}>
                 <Link to="about">About</Link>
@@ -22,14 +30,4 @@ class _Header {
       </nav>
     );
   }
-
-  getActiveClassName() {
-    return Array.prototype.slice.call(arguments).some(function(routeName) {
-      return this.isActive(routeName);
-    }, this) ? 'active' : '';
-  }
-}
-
-_Header.prototype.mixins = [Router.State];
-
-export const Header = React.createClass(_Header.prototype);
+});

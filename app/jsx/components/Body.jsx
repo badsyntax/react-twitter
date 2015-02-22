@@ -1,10 +1,10 @@
 import React from 'react';
 
-class _Body {
+export const Body = React.createClass({
+
   getClassName() {
     return 'foo';
-  }
-
+  },
 
   render() {
     const x = 'x';
@@ -15,6 +15,4 @@ class _Body {
       </div>
     );
   }
-}
-
-export const Body = React.createClass(_Body.prototype);
+});

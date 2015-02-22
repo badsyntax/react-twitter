@@ -2,9 +2,10 @@ import React from 'react';
 import Router from 'react-router';
 
 import {App} from './components/App.jsx';
-import {Home} from './components/Home.jsx';
-import {About} from './components/About.jsx';
-import {NotFound} from './components/NotFound.jsx';
+import {HomePage} from './components/HomePage.jsx';
+import {SignInPage} from './components/SignInPage.jsx';
+import {AboutPage} from './components/AboutPage.jsx';
+import {NotFoundPage} from './components/NotFoundPage.jsx';
 
 var {
   Route,
@@ -14,10 +15,11 @@ var {
 } = Router;
 
 export const routes = (
-  <Route handler={App} path="/">
-    <DefaultRoute handler={Home} />
-    <Route name="about" handler={About} />
-    <Route name="home" handler={Home} path="/" />
-    <NotFoundRoute handler={NotFound}/>
+  <Route handler={App} path="/" name="app">
+    <DefaultRoute handler={SignInPage} />
+    <Route name="about" handler={AboutPage} />
+    <Route name="signin" handler={SignInPage} path="/sign-in" />
+    <NotFoundRoute handler={SignInPage}/>
+    <Redirect from="" to="signin" />
   </Route>
 );

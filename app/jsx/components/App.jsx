@@ -7,7 +7,7 @@ import {Footer} from './Footer.jsx';
 
 var { Route, DefaultRoute, RouteHandler, NotFoundRoute, Redirect, Link } = Router;
 
-class _App {
+export const App = React.createClass({
   render() {
     return (
       <div>
@@ -17,6 +17,4 @@ class _App {
       </div>
     );
   }
-}
-
-export const App = React.createClass(_App.prototype);
+});

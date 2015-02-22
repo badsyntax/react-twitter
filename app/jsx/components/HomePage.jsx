@@ -1,6 +1,6 @@
 import React from 'react';
 
-class _Home {
+export const HomePage = React.createClass({
   render() {
     return (
       <div>
@@ -8,6 +8,4 @@ class _Home {
       </div>
     );
   }
-}
-
-export const Home = React.createClass(_Home.prototype);
+});

@@ -1,6 +1,7 @@
 import React from 'react';
 
-class _Footer {
+export const Footer = React.createClass({
+
   render() {
     return (
       <footer>
@@ -8,6 +9,4 @@ class _Footer {
       </footer>
     );
   }
-}
-
-export const Footer = React.createClass(_Footer.prototype);
+});

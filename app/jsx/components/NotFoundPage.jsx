@@ -1,6 +1,6 @@
 import React from 'react';
 
-class _NotFound {
+export const NotFoundPage = React.createClass({
   render() {
     return (
       <div>
@@ -8,6 +8,4 @@ class _NotFound {
       </div>
     );
   }
-}
-
-export const NotFound = React.createClass(_NotFound.prototype);
+});

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class _About {
+export const AboutPage = React.createClass({
   render() {
     return (
       <div>
@@ -8,6 +8,4 @@ class _About {
       </div>
     );
   }
-}
-
-export const About = React.createClass(_About.prototype);
+});
